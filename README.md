@@ -2,7 +2,7 @@
 
 ### Descrição
 
-Repositório para alocar os projeto do Santander Bootcamp 2023 - Beckend Java.
+Repositório para alocar as atiividade e projetos do Santander Bootcamp 2023 - Beckend Java.
 
 ### Referências
 
