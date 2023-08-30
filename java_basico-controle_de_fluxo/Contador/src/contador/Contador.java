@@ -1,8 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package contador;
+
+import contador.exceptions.ParametrosInvalidosException;
+import java.util.Scanner;
 
 /**
  *
@@ -10,11 +9,39 @@ package contador;
  */
 public class Contador {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Digite o primeiro parâmentro: ");
+        int paramentroUm = input.nextInt();
+        
+        System.out.print("Digite o segundo parâmentro: ");
+        int paramentroDois = input.nextInt();
+        
+        try {
+            contar(paramentroUm, paramentroDois);
+            
+        } catch (ParametrosInvalidosException e) {
+            System.out.println("Mensagem: " + e);
+        }
     }
+
+    private static void contar(int paramentroUm, int paramentroDois) throws ParametrosInvalidosException  {
+        int contagem;
+        
+        if(paramentroUm > paramentroDois){
+            throw new ParametrosInvalidosException("O segundo parâmetro deve ser maior que o primeiro!");
+        }else{
+            contagem = paramentroDois - paramentroUm;
+            
+            System.out.println("\nImprimindo números: \n");
+            for(int i = 1; i <= contagem; i++){
+                System.out.println("Imprimindo número " + i);
+            }
+        }
+    }
+    
+    
     
 }
