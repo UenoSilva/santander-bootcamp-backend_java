@@ -12,3 +12,4 @@ Repositório para alocar as atiividade e projetos do Santander Bootcamp 2023 - B
 ### Referências
 
 * [Padrões de commits 📜](https://github.com/iuricode/padroes-de-commits#readme)
+* [Java Básico 📚](https://glysns.gitbook.io/java-basico/)
