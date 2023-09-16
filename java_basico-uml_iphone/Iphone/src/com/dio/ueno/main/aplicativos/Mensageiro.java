@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dio.ueno.main.aplicativos;
 
 import com.dio.ueno.main.Contato;
@@ -14,20 +10,20 @@ import java.util.Map;
  *
  * @author Ueno
  */
-public class Mensageiro implements ContatoInterface{
-    
-    private Map<Contato,String> mensagem = new HashMap<>();
+public class Mensageiro implements ContatoInterface {
+
+    private Map<Contato, String> mensagem = new HashMap<>();
     private List<Contato> contatos;
-    
-    public Mensageiro(List<Contato> contatos){
+
+    public Mensageiro(List<Contato> contatos) {
         this.contatos = contatos;
     }
-    
-    public void mensgens(){
+
+    public void mensgens() {
         System.out.println(mensagem);
     }
-    
-    public void novaMensagem(Contato contato, String mensagem){
+
+    public void novaMensagem(Contato contato, String mensagem) {
         this.mensagem.put(contato, mensagem);
         System.out.println("Mensagem enviada para " + contato.getNome());
     }
@@ -45,13 +41,13 @@ public class Mensageiro implements ContatoInterface{
     @Override
     public Contato selecionarContatoByNome(String nome) {
         Contato contatoSelecionado = null;
-        if(!contatos.isEmpty()){
-            for(Contato c : contatos){
-                if(c.getNome().equalsIgnoreCase(nome)){
+        if (!contatos.isEmpty()) {
+            for (Contato c : contatos) {
+                if (c.getNome().equalsIgnoreCase(nome)) {
                     contatoSelecionado = c;
                 }
             }
-        }else{
+        } else {
             throw new RuntimeException("Lista Vazia");
         }
         return contatoSelecionado;
