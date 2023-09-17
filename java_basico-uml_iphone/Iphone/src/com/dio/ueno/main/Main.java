@@ -4,6 +4,7 @@
  */
 package com.dio.ueno.main;
 
+import com.dio.ueno.main.aplicativos.Browser;
 import com.dio.ueno.main.aplicativos.Camera;
 import com.dio.ueno.main.model.Contato;
 import com.dio.ueno.main.aplicativos.Mensageiro;
@@ -66,6 +67,14 @@ public class Main {
         camera.salvarVideo();
         camera.visualizarVideo("");
         camera.excluirVideo("");
+        
+        Browser browser = new Browser();
+        browser.acessarSite("www.google.com");
+        browser.atualizarPagina();
+        browser.novoAba();
+        browser.atualizarPagina();
+        browser.acessarSite("www.youtube.com");
+        browser.selecionarAba(3);
     }
     
 }

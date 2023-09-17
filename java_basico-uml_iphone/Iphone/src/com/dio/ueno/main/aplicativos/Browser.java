@@ -26,23 +26,27 @@ public class Browser {
     
     public void acessarSite(String site){
         abas.put(abaAtual, site);
+        System.out.println("Site: " + site);
     }
     
     public void atualizarPagina(){
-        System.out.println("Atualizando página");
+        System.out.println("Atualizando página " + abas.get(abaAtual));
     }
     
     public void novoAba(){
         int numeroAbas = abas.size();
         abaAtual = numeroAbas+1;
-        abas.put(numeroAbas+1, "");
+        abas.put(numeroAbas+1, null);
+        System.out.println("Nova aba aberta!");
     }
     
     public void selecionarAba(int aba){
         if(aba > abas.size()){
-            abaAtual = abas.size()+1;
+            novoAba();
+            System.out.println("Aba: " + abas.get(abaAtual));
         }else{
             abaAtual = aba;
+            System.out.println("Aba: " + abas.get(abaAtual));
         }
     }
 }
