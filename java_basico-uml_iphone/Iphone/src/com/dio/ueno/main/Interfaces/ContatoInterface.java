@@ -13,4 +13,6 @@ public interface ContatoInterface {
     void listaContatos();
 
     Contato selecionarContatoByNome(String nome);
+    
+    Contato selecionarContatoByNumero(int numero);
 }
