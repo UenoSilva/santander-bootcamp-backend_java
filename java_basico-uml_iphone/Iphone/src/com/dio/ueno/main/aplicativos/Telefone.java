@@ -3,6 +3,7 @@ package com.dio.ueno.main.aplicativos;
 import com.dio.ueno.main.Contato;
 import com.dio.ueno.main.Interfaces.ContatoInterface;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  *
@@ -51,11 +52,8 @@ public class Telefone implements ContatoInterface {
     public Contato selecionarContatoByNome(String nome) {
         Contato contatoSelecionado = null;
         if (!contatos.isEmpty()) {
-            for (Contato c : contatos) {
-                if (c.getNome().equalsIgnoreCase(nome)) {
-                    contatoSelecionado = c;
-                }
-            }
+            contatoSelecionado = (Contato) contatos.stream()
+                    .filter((Contato c) -> c.getNome().equalsIgnoreCase(nome)).toList();
         } else {
             throw new RuntimeException("Lista Vazia");
         }
