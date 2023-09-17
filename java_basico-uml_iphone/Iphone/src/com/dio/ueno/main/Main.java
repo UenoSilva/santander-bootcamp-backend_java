@@ -4,9 +4,12 @@
  */
 package com.dio.ueno.main;
 
+import com.dio.ueno.main.model.Contato;
 import com.dio.ueno.main.aplicativos.Mensageiro;
+import com.dio.ueno.main.aplicativos.PlayMusica;
 import com.dio.ueno.main.aplicativos.Telefone;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -35,6 +38,15 @@ public class Main {
         mensageiro.novaMensagem(c, "Oi");
         mensageiro.mensgens();
         
+        PlayMusica playMusica = new PlayMusica();
+        playMusica.adicionarMusicar("Papercut", "Linkim Park", 3.42, new ArrayList<>(Arrays.asList("Rock","Alternative")));
+        playMusica.adicionarMusicar("in the end", "Linkim Park", 4.00, new ArrayList<>(Arrays.asList("Rock","Alternative")));
+        playMusica.adicionarMusicar("Crawling", "Linkim Park", 4.22, new ArrayList<>(Arrays.asList("Rock","Alternative")));
+        playMusica.adicionarMusicar("Chairman", "Linkim Park", 3.30, new ArrayList<>(Arrays.asList("Rock","Alternative")));
+        playMusica.reproduzir("Papercut");
+        playMusica.passarMusica();
+        playMusica.parar();
+        playMusica.passarMusica();
         
     }
     

@@ -1,6 +1,6 @@
 package com.dio.ueno.main.aplicativos;
 
-import com.dio.ueno.main.Contato;
+import com.dio.ueno.main.model.Contato;
 import com.dio.ueno.main.Interfaces.ContatoInterface;
 import java.util.HashMap;
 import java.util.List;

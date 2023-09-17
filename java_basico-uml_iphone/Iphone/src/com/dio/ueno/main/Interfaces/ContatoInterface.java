@@ -1,6 +1,6 @@
 package com.dio.ueno.main.Interfaces;
 
-import com.dio.ueno.main.Contato;
+import com.dio.ueno.main.model.Contato;
 
 /**
  *
