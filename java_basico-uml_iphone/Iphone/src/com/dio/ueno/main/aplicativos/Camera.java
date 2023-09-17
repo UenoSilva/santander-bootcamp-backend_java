@@ -35,6 +35,7 @@ public class Camera implements FotoInterface, VideoInterface {
     @Override
     public void salvarFoto() {
         fotos.add(foto);
+        System.out.println("Foto salvar");
     }
 
     @Override
@@ -42,6 +43,7 @@ public class Camera implements FotoInterface, VideoInterface {
         if (!fotos.isEmpty()) {
             List<Foto> f = fotos.stream()
                     .filter((Foto foto) -> foto.getNome().equalsIgnoreCase(nome)).toList();
+            System.out.println("Foto removida: " + f);
             fotos.remove(f);
         } else {
             throw new RuntimeException("A lista está vazia.");
@@ -54,7 +56,7 @@ public class Camera implements FotoInterface, VideoInterface {
             List<Foto> f = fotos.stream()
                     .filter((Foto foto) -> foto.getNome().equalsIgnoreCase(nome)).toList();
             System.out.println("Foto " + f);
-        }else{
+        } else {
             throw new RuntimeException("A lista está vazia.");
         }
     }
@@ -67,6 +69,7 @@ public class Camera implements FotoInterface, VideoInterface {
     @Override
     public void salvarVideo() {
         videos.add(video);
+        System.out.println("Video salvo");
     }
 
     @Override
@@ -74,6 +77,7 @@ public class Camera implements FotoInterface, VideoInterface {
         if (!videos.isEmpty()) {
             List<Video> v = videos.stream()
                     .filter((Video video) -> video.getNome().equalsIgnoreCase(nome)).toList();
+            System.out.println("Video excluido: " + v);
             videos.remove(v);
         } else {
             throw new RuntimeException("A lista está vazia.");
@@ -86,7 +90,7 @@ public class Camera implements FotoInterface, VideoInterface {
             List<Video> v = videos.stream()
                     .filter((Video video) -> video.getNome().equalsIgnoreCase(nome)).toList();
             System.out.println("Video " + v);
-        }else{
+        } else {
             throw new RuntimeException("A lista está vazia.");
         }
     }

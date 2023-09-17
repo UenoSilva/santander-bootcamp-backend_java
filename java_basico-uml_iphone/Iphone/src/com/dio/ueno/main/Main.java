@@ -9,6 +9,8 @@ import com.dio.ueno.main.model.Contato;
 import com.dio.ueno.main.aplicativos.Mensageiro;
 import com.dio.ueno.main.aplicativos.PlayMusica;
 import com.dio.ueno.main.aplicativos.Telefone;
+import com.dio.ueno.main.model.Foto;
+import com.dio.ueno.main.model.Video;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -50,9 +52,20 @@ public class Main {
         playMusica.passarMusica();
         
         Camera camera = new Camera();
-        camera.tirarFoto();
+        camera.tirarFoto(new Foto("Selfie", "Uma foto de si mesmo", 3.0));
+        camera.salvarFoto();
+        camera.tirarFoto(new Foto("Ipê", "Uma arvore de ipê amarelo", 4.0));
+        camera.salvarFoto();
+        camera.tirarFoto(new Foto("Carro", "Uma foto de um carro", 1.5));
+        camera.tirarFoto(new Foto("Moto", "Uma foto de uma moto", 3.0));
+        camera.salvarFoto();
+        camera.visualizarFoto("Ipê");
+        camera.excluirFoto("Selfie");
         
-        
+        camera.gravar(new Video("", "", 0));
+        camera.salvarVideo();
+        camera.visualizarVideo("");
+        camera.excluirVideo("");
     }
     
 }
