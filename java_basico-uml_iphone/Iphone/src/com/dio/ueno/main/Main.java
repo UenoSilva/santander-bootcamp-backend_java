@@ -38,7 +38,7 @@ public class Main {
         
         Mensageiro mensageiro = new Mensageiro(contatos);
         Contato c = mensageiro.selecionarContatoByNome("Ueno");
-        mensageiro.novaMensagem(c, "Oi");
+        mensageiro.novaMensagem(87534223, "Oi");
         mensageiro.mensgens();
         
         PlayMusica playMusica = new PlayMusica();
