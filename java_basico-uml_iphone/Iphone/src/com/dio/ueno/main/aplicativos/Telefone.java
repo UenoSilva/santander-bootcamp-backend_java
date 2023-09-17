@@ -3,7 +3,6 @@ package com.dio.ueno.main.aplicativos;
 import com.dio.ueno.main.model.Contato;
 import com.dio.ueno.main.Interfaces.ContatoInterface;
 import java.util.List;
-import java.util.function.Predicate;
 
 /**
  *
@@ -12,7 +11,6 @@ import java.util.function.Predicate;
 public class Telefone implements ContatoInterface {
 
     private Contato contato;
-
     private List<Contato> contatos;
 
     public Telefone(List<Contato> contatos) {
