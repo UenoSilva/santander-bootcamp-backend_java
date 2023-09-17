@@ -4,6 +4,7 @@
  */
 package com.dio.ueno.main;
 
+import com.dio.ueno.main.aplicativos.Camera;
 import com.dio.ueno.main.model.Contato;
 import com.dio.ueno.main.aplicativos.Mensageiro;
 import com.dio.ueno.main.aplicativos.PlayMusica;
@@ -47,6 +48,10 @@ public class Main {
         playMusica.passarMusica();
         playMusica.parar();
         playMusica.passarMusica();
+        
+        Camera camera = new Camera();
+        camera.tirarFoto();
+        
         
     }
     

@@ -4,17 +4,19 @@
  */
 package com.dio.ueno.main.Interfaces;
 
+import com.dio.ueno.main.model.Foto;
+
 /**
  *
  * @author Ueno
  */
 public interface FotoInterface {
     
-    void tirarFoto();
+    void tirarFoto(Foto foto);
     
-    void salvar();
+    void salvarFoto();
     
-    void excluir();
+    void excluirFoto(String nome);
     
     void visualizarFoto(String nome);
     

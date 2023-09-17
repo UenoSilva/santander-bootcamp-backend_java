@@ -4,17 +4,19 @@
  */
 package com.dio.ueno.main.Interfaces;
 
+import com.dio.ueno.main.model.Video;
+
 /**
  *
  * @author Ueno
  */
 public interface VideoInterface {
 
-    void gravar();
+    void gravar(Video video);
 
-    void salvar();
+    void salvarVideo();
 
-    void excluir();
+    void excluirVideo(String nome);
 
     void visualizarVideo(String nome);
 
