@@ -23,7 +23,13 @@ public class Mensageiro implements ContatoInterface {
         System.out.println(mensagem);
     }
 
-    public void novaMensagem(Contato contato, String mensagem) {
+    public void novaMensagem(int numero, String mensagem) {
+        Contato contato = null;
+        if(numero == selecionarContatoByNumero(numero).getNumero()){
+            contato = selecionarContatoByNumero(numero);
+        }else{
+            contato = new Contato("", numero);
+        }
         this.mensagem.put(contato, mensagem);
         System.out.println("Mensagem enviada para " + contato.getNome());
     }
@@ -47,6 +53,19 @@ public class Mensageiro implements ContatoInterface {
                     contatoSelecionado = c;
                 }
             }
+        } else {
+            throw new RuntimeException("Lista Vazia");
+        }
+        return contatoSelecionado;
+    }
+    
+    @Override
+    public Contato selecionarContatoByNumero(int numero) {
+        Contato contatoSelecionado = null;
+        if (!contatos.isEmpty()) {
+            List<Contato> con = contatos.stream()
+                    .filter((Contato c)-> c.getNumero() == numero).toList();
+            contatoSelecionado = con.get(0);
         } else {
             throw new RuntimeException("Lista Vazia");
         }
