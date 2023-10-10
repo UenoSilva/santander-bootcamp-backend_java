@@ -25,7 +25,8 @@ public class Browser {
     }
     
     public void acessarSite(String site){
-        abas.put(abaAtual, site);
+        url = site;
+        abas.put(abaAtual, url);
         System.out.println("Site: " + site);
     }
     
