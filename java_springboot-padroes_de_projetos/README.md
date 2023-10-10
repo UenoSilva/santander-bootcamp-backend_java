@@ -6,9 +6,10 @@ Criação de uma APi com Spring Boot usando os padrões de projeto: Singleton, S
 
 Uma Api Rest que criar um cliente (id, nome e endereco) com um endereço (cep, logradouro, complemento, bairro, localidade, uf, ibge, gia, ddd e siafi). Na hora da criação do cliente apenas o nome e cep são fornecidos, onde os demais campos são preechidos através da APi ViaCEP.
 
-Exemplo: 
+## Exemplo
 
 Json enviada através do verbo http Post
+
 ```
 {
     "nome": "José Filho",
@@ -19,6 +20,7 @@ Json enviada através do verbo http Post
 ```
 
 Dado que é salvo em memória
+
 ```
 "id": 1,
     "nome": "José Filho",
