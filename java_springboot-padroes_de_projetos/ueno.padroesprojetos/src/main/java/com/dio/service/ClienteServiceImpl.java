@@ -3,12 +3,14 @@ package com.dio.service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.dio.model.Cliente;
 import com.dio.model.Endereco;
 import com.dio.repository.ClienteRepository;
 import com.dio.repository.EnderecoRepository;
 
+@Service
 public class ClienteServiceImpl implements ClienteService {
 	
 	@Autowired
