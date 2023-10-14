@@ -12,5 +12,5 @@ public interface AnimeService {
 	
 	Anime findById(Long id);
 	
-	Anime findByTitulo(String titulo);
+	
 }

@@ -31,9 +31,6 @@ public class AnimeServiceImpl implements AnimeService{
 		return animeRepository.findById(id).orElseThrow(NoSuchElementException::new);
 	}
 
-	@Override
-	public Anime findByTitulo(String titulo) {
-		return animeRepository.findByTitulo(titulo);
-	}
+	
 
 }
