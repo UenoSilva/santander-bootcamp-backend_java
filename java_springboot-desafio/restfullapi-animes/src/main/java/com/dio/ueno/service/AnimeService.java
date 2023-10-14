@@ -12,5 +12,7 @@ public interface AnimeService {
 	
 	Anime findById(Long id);
 	
+	Anime update(Long id, Anime anime);
 	
+	void delete(Long id);
 }

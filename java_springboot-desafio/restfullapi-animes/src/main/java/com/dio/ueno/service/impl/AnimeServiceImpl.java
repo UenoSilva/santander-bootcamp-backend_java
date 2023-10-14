@@ -30,7 +30,26 @@ public class AnimeServiceImpl implements AnimeService{
 	public Anime findById(Long id) {
 		return animeRepository.findById(id).orElseThrow(NoSuchElementException::new);
 	}
-
 	
+	@Override
+	public Anime update(Long id, Anime anime) {
+		Anime ani = animeRepository.findById(id).get();
+				
+		ani.setTitulo(anime.getTitulo());
+		ani.setDescricao(anime.getDescricao());
+		ani.setDataEncerramento(anime.getDataEncerramento());
+		ani.setDataLancamento(anime.getDataLancamento());
+		ani.setEpisodios(anime.getEpisodios());
+		ani.setGeneros(anime.getGeneros());
+		ani.setImagens(anime.getImagens());
+		ani.setStudio(anime.getStudio());
+				
+		return animeRepository.save(ani);
+	}
+
+	@Override
+	public void delete(Long id) {
+		animeRepository.deleteById(id);		
+	}
 
 }
